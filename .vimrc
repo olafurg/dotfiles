@@ -1,8 +1,6 @@
-" A GOOD VIM by http://dougblack.io/words/a-good-vimrc.html
-
 " Colors {{{
 syntax enable           " enable syntax processing
-set bg=dark             " use 256 colors by default
+set t_Co=256             " use 256 colors by default
 colorscheme desert      " awesome colorscheme
 " }}}
 
@@ -82,7 +80,7 @@ endif
 augroup configgroup
   autocmd!
   autocmd VimEnter * highlight clear SignColumn
-  autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+" autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
                           \:call <SID>StripTrailingWhitespaces()
   autocmd FileType java setlocal noexpandtab
   autocmd FileType java setlocal list

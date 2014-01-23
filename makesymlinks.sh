@@ -9,7 +9,8 @@
 
 dir=~/dotfiles                                  # dotfiles directory
 olddir=~/dotfiles_old                           # old dotfiles backup directory
-files=".bashrc .vimrc .vim .gitignore .bash oh-my-zsh"    # list of files/folders to symlink in homedir
+files=".vimrc .vim oh-my-zsh"    # list of files/folders to symlink in homedir
+#files=".bashrc .vimrc .vim .gitignore .bash oh-my-zsh"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -57,5 +58,5 @@ install_zsh () {
 			fi
 }
 
-install_zsh
+#install_zsh
 
