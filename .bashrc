@@ -137,3 +137,10 @@ echo "'$file' is not a valid file"
 done
 }
 # }}}
+
+# Added by the BTAF install script
+export LD_LIBRARY_PATH=/opt/oracle/instantclient
+export PATH=$PATH:/opt/oracle/instantclient
+export TNS_ADMIN=/opt/oracle/instantclient
+export RUBYOPT=rubygems
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

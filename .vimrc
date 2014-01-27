@@ -1,6 +1,6 @@
 " Colors {{{
 syntax enable           " enable syntax processing
-set t_Co=256             " use 256 colors by default
+"set t_Co=256             " use 256 colors by default
 colorscheme desert      " awesome colorscheme
 " }}}
 
@@ -14,7 +14,7 @@ set modelines=1
 " UI Config {{{
 set number              " show line numbers
 set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
+"set cursorline          " highlight current line
 filetype indent on      " load filetype specific indent files
 set wildmenu            " visual autocomplete for command menu
 "set lazyredraw          " redraw only when we need to
@@ -81,7 +81,7 @@ augroup configgroup
   autocmd!
   autocmd VimEnter * highlight clear SignColumn
 " autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
-                          \:call <SID>StripTrailingWhitespaces()
+"                          \:call <SID>StripTrailingWhitespaces()
   autocmd FileType java setlocal noexpandtab
   autocmd FileType java setlocal list
   autocmd FileType java setlocal listchars=tab:+\ ,eol:-
@@ -106,7 +106,7 @@ augroup END
 
 " Launch configurations {{{
 call pathogen#infect()                     " use pathogen
-call pathogen#incubate()                  " use pathogen
+call pathogen#incubate()                   " use pathogen
 " }}}
 
 " Backups {{{

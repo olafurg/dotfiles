@@ -1,1 +1,0 @@
-/home/olafur/dotfiles/.vim
