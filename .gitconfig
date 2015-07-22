@@ -8,3 +8,5 @@
 [user]
 	email = olafur.g@gmail.com
 	name = Ólafur Guðmundsson
+[credential]
+	helper = cache --timeout=3600
