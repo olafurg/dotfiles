@@ -1,0 +1,10 @@
+[push]
+	default = simple
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[user]
+	email = olafur.g@gmail.com
+	name = Ólafur Guðmundsson
