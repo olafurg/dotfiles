@@ -17,7 +17,7 @@ echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
 
-# create (if not there) and change to the dotfiles directory
+# change to the dotfiles directory
 echo -n "Change to the dotfiles directory ..."
 cd $dir
 echo "done"
@@ -25,9 +25,9 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-	mv ~/$file $olddir
-	echo "Creating symlink to $file in home directory."
-	ln -s $dir/$file ~/$file
+  mv ~/$file $olddir
+  echo "Creating symlink to $file in home directory."
+  ln -s $dir/$file ~/$file
 done
 
 install_zsh () {
@@ -57,4 +57,3 @@ install_zsh () {
 }
 
 #install_zsh
-
