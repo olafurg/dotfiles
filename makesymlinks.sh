@@ -14,8 +14,7 @@ files="vimrc vim bashrc bash gitconfig gemrc"
 
 ##########
 # Clone git-aware-prompt
-# cd $dir/.bash/
-# git clone https://github.com/jimeh/git-aware-prompt.git
+git submodule update --init --recursive
 
 # Create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

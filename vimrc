@@ -104,11 +104,6 @@ augroup configgroup
 augroup END
 " }}}
 
-" Launch configurations {{{
-call pathogen#infect()                     " use pathogen
-call pathogen#incubate()                   " use pathogen
-" }}}
-
 " Backups {{{
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
