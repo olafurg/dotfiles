@@ -12,7 +12,11 @@ files=".vimrc .vim .bashrc .bash .gitconfig .gemrc"    # list of files/folders t
 
 ##########
 
-# create dotfiles_old in homedir
+# Clone git-aware-prompt
+cd $dir/.bash/
+git clone https://github.com/jimeh/git-aware-prompt.git
+
+# Create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "done"
