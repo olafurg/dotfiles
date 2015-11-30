@@ -149,3 +149,5 @@ export PS1="\[$bldgrn\]\u\[$txtcyn\]@\[$bldgrn\]\h\[\033[00m\] \[$txtcyn\]in \[$
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# Mount SSHF connection to PI on login.
+# sshfs -o idmap=user olafur@192.168.1.110:/media ~/pi
