@@ -1,19 +1,21 @@
 [global_config]
 [keybindings]
-[profiles]
-  [[default]]
-    background_darkness = 0.89
-    scrollback_lines = 10000
-    login_shell = True
-    background_type = transparent
-    background_image = None
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
       size = 900, 600
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.89
+    background_image = None
+    background_type = transparent
+    font = Ubuntu Mono 9
+    login_shell = True
+    scrollback_lines = 10000
+    use_system_font = False
