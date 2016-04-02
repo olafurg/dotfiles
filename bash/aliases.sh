@@ -1,8 +1,8 @@
-# some more ls aliases
-alias ll='ls -alF'
+# Basic aliases
+alias ll='ls -l'
+alias lla='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias sublime='sublime-text'
 alias rm='rm -i'
 alias mv='mv -i'
 
