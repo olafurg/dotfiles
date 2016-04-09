@@ -7,7 +7,7 @@
       type = Terminal
     [[[window0]]]
       parent = ""
-      size = 900, 600
+      size = 800, 500
       type = Window
 [plugins]
 [profiles]
