@@ -8,22 +8,26 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir (without leading dot)
-files="rubocop.yml vimrc vim bashrc bash gitconfig gemrc rspec config/terminator/config"
+directories="vim config/terminator/"
+files="rubocop.yml vim/vimrc bashrc bash gitconfig gemrc rspec config/terminator/config"
 
 ########## Setup
 
 # Create dotfiles_old in home dir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
+printf -n "Creating $olddir for backup of any existing dotfiles in ~ ... "
 mkdir -p $olddir
-echo "done"
+printf "done"
 
 # Change to the dotfiles directory
-echo -n "Change to the dotfiles directory ..."
+printf -n "Change to the dotfiles directory ... "
 cd $dir
-echo "done"
+printf "done"
 
-# Terminator specific
+# Create directories
+printf -n "Creating directories ... "
 mkdir -p ~/.config/terminator
+mkdir -p ~/.vim
+printf "done"
 
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 echo "Moving any existing dotfiles from ~ to $olddir"
@@ -32,6 +36,7 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
+echo "done"
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
