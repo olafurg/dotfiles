@@ -1,3 +1,7 @@
+" Shell config {{{
+set shell=/usr/bin/zsh
+" }}}
+
 " Colors {{{
 syntax enable           " enable syntax processing
 set t_Co=256             " use 256 colors by default
