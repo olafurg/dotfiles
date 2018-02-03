@@ -8,7 +8,7 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir (without leading dot)
-files="rubocop.yml vim/vimrc bashrc bash gitconfig gemrc rspec config/terminator/config"
+files="zshrc rubocop.yml vim/vimrc bashrc bash gitconfig gemrc rspec config/terminator/config"
 
 ########## Setup
 
