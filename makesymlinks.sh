@@ -8,7 +8,7 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir (without leading dot)
-files="zshrc rubocop.yml vim/vimrc bashrc bash gitconfig gemrc rspec config/terminator/config"
+files=".zshrc .rubocop.yml .vim/.vimrc .bashrc .bash .gitconfig .gemrc .rspec .config/terminator/config"
 
 ########## Setup
 
@@ -31,9 +31,9 @@ printf "done\n"
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-  mv ~/.$file $olddir
+  mv ~/$file $olddir
   echo "Creating symlink to $file in home directory."
-  ln -s $dir/$file ~/.$file
+  ln -s $dir/$file ~/$file
 done
 echo "done"
 
