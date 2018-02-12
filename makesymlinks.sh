@@ -10,13 +10,13 @@ olddir=~/dotfiles_old
 # List of files/dirs to symlink in home dir
 files=".zshrc
        .rubocop.yml
-       .vim/.vimrc
+       .vim
        .bash
        .bashrc
        .gitconfig
        .gemrc
        .rspec
-       .config/terminator/config
+       .config
        .tmux.conf
        "
 
@@ -64,12 +64,6 @@ printf "done\n"
 # Change to the dotfiles directory
 printf "Change to the dotfiles directory ... "
 cd $dir
-printf "done\n"
-
-# Create directories
-printf "Creating directories ... "
-mkdir -p ~/.config/terminator
-mkdir -p ~/.vim
 printf "done\n"
 
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
