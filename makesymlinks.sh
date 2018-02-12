@@ -7,7 +7,7 @@
 dir=~/dotfiles
 olddir=~/dotfiles_old
 
-# List of files/dirs to symlink in home dir (without leading dot)
+# List of files/dirs to symlink in home dir
 files=".zshrc
        .rubocop.yml
        .vim/.vimrc
@@ -20,7 +20,41 @@ files=".zshrc
        .tmux.conf
        "
 
-########## Setup
+########## Install zsh and oh-my-zsh
+install_zsh () {
+  # Test to see if zsh is installed.
+	if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
+    # Install oh-my-zsh acc. to their instructions.
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    # Set the default shell to zsh if it isn't currently set to zsh
+    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+      chsh -s $(which zsh)
+    fi
+  else # If zsh isn't installed, get the platform of the current machine
+    platform=$(uname -a);
+    # If the platform is Ubuntu, try an apt-get to install zsh and then recurse
+    if [[ ${platform,,} = *"ubuntu"* ]]; then
+      sudo apt-get install zsh
+			install_zsh
+    # If the platform is Arch, try a pacman -Sy to install and then recurse
+    elif [[ ${platform,,} = *"arch"* ]]; then
+      sudo pacman -S zsh
+			install_zsh
+    # If the platform is some other Linux, tell the user to install zsh
+    elif [[ ${platform,,} = *"linux"* ]]; then
+      echo "Please install zsh, then re-run this script"
+      exit
+    # If the platform is OS X, tell the user to install zsh :)
+    elif [[ $platform == 'Darwin' ]]; then
+			echo "Please install zsh, then re-run this script!"
+			exit
+    fi
+  fi
+}
+
+install_zsh
+
+########## Setup of dotfiles
 
 # Create dotfiles_old in home dir
 printf "Creating $olddir for backup of any existing dotfiles in ~ ... "
@@ -46,29 +80,3 @@ for file in $files; do
   ln -s $dir/$file ~/$file
 done
 echo "done"
-
-install_zsh () {
-  # Test to see if zsh is installed.
-	if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Install oh-my-zsh acc. to their instructions.
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-      chsh -s $(which zsh)
-    fi
-  else
-    # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
-    if [[ $platform == 'Linux' ]]; then
-      sudo apt-get install zsh
-			install_zsh
-    # If the platform is OS X, tell the user to install zsh :)
-    elif [[ $platform == 'Darwin' ]]; then
-			echo "Please install zsh, then re-run this script!"
-			exit
-    fi
-  fi
-}
-
-install_zsh
