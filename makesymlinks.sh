@@ -4,6 +4,7 @@
 ############################
 
 ########## Variables
+
 dir=~/dotfiles
 olddir=~/dotfiles_old
 
@@ -11,6 +12,7 @@ olddir=~/dotfiles_old
 files=".zshrc
        .rubocop.yml
        .vim
+       .vimrc
        .bash
        .bashrc
        .gitconfig
@@ -21,6 +23,7 @@ files=".zshrc
        "
 
 ########## Install zsh and oh-my-zsh
+
 install_zsh () {
   # Test to see if zsh is installed.
 	if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then

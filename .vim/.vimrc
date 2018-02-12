@@ -1,0 +1,1 @@
+/home/olafurg/dotfiles/.vim/.vimrc
