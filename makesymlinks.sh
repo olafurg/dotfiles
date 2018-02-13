@@ -35,18 +35,21 @@ install_zsh () {
     fi
   else # If zsh isn't installed, get the platform of the current machine
     platform=$(uname -a);
-    # If the platform is Ubuntu, try an apt-get to install zsh and then recurse
-    if [[ ${platform,,} = *"ubuntu"* ]]; then
-      sudo apt-get install zsh
-			install_zsh
-    # If the platform is Arch, try a pacman -Sy to install and then recurse
-    elif [[ ${platform,,} = *"arch"* ]]; then
-      sudo pacman -S zsh
-			install_zsh
-    # If the platform is some other Linux, tell the user to install zsh
-    elif [[ ${platform,,} = *"linux"* ]]; then
-      echo "Please install zsh, then re-run this script"
-      exit
+    # If the platform is some Linux version, tell the user to install zsh
+    if [[ ${platform,,} = *"linux"* ]]; then
+      # Ubuntu (including Microsoft WSL)?
+      if [[ ${platform,,} = *"ubuntu"* ]] || [[ ${platform,,} = *"microsoft"* ]]; then
+        sudo apt-get install zsh
+        install_zsh
+      # Arch?
+      elif [[ ${platform,,} = *"arch"* ]]; then
+        sudo pacman -S zsh
+        install_zsh
+      # Other (you're on your own)
+      else
+        echo "Please install zsh, then re-run this script"
+        exit
+      fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
 			echo "Please install zsh, then re-run this script!"
