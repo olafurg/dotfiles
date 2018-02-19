@@ -96,6 +96,9 @@ source $ZSH/oh-my-zsh.sh
 # RVM support 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
+# User path
+export PATH=$PATH:~/bin
+
 # Fix directory colors: 
 #Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS

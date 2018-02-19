@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/tmp/blah'
+let g:netrw_dirhist_2='/tmp/blah/db'
+let g:netrw_dirhist_3='/tmp/blah/db/migrate'
+let g:netrw_dirhist_4='/tmp/blah/db'
+let g:netrw_dirhist_5='/tmp/blah'
+let g:netrw_dirhist_6='/tmp/blah/app'
+let g:netrw_dirhist_7='/tmp/blah'
+let g:netrw_dirhist_8='/home/olafurg'
+let g:netrw_dirhist_9='/home/olafurg/dotfiles'

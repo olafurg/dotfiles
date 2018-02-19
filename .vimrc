@@ -164,9 +164,10 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-set background=dark
+set background=light
 try
-    colorscheme deus
+    let g:solarized_termcolors=256
+    colorscheme solarized
     let g:airline_theme='deus'
 catch
 endtry
