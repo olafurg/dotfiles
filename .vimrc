@@ -8,10 +8,9 @@
 "    -> Colors and fonts
 "    -> Text, tab related
 "    -> Searching
-"    -> Moving around, tabs, windows and buffers
 "    -> Files and backups
 "    -> Visual mode related
-"    -> Moving around, tabs and buffers
+"    -> Moving around, tabs, windows and buffers
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -41,7 +40,7 @@ set showcmd
 let mapleader = ","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Pathogen install
 execute pathogen#infect()
@@ -135,6 +134,10 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Move visual lines up/down rather than actual lines
+noremap j gj
+noremap k gk
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
