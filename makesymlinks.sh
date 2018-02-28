@@ -19,7 +19,6 @@ files=".zshrc
        .gitconfig
        .gemrc
        .rspec
-       .config
        .tmux.conf
        "
 
