@@ -68,11 +68,11 @@ set splitbelow
 syntax enable
 
 " Colorscheme settings
-set background=light
+set background=dark
 try
-    let g:solarized_termcolors=256
-    colorscheme solarized
-    let g:airline_theme='solarized'
+ let g:gruvbox_termcolors=256
+  colorscheme gruvbox
+  let g:airline_theme='gruvbox'
 catch
 endtry
 
@@ -149,6 +149,6 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.rb :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.rb,*.md :call CleanExtraSpaces()
 endif
 
