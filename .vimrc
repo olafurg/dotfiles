@@ -97,7 +97,7 @@ set shiftwidth=2
 set tabstop=8
 
 " Be smart when using tabs
-"set smarttab
+set smarttab
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -118,6 +118,13 @@ set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"    -> Files and backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Disable swap files
+set noswapfile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
