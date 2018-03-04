@@ -4,6 +4,7 @@
 "
 " Sections:
 "    -> General
+"    -> Plugins
 "    -> VIM user interface
 "    -> Colors and fonts
 "    -> Text, tab related
@@ -15,6 +16,40 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-plug auto-install
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" vim-plug plugins list (between begin/end
+call plug#begin('~/.vim/plugged')
+Plug 'kien/ctrlp.vim'
+Plug 'morhetz/gruvbox'
+Plug 'jpo/vim-railscasts-theme'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ajmwagar/vim-deus'
+Plug 'tpope/vim-rails'
+Plug 'danro/rename.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'Yggdroot/indentLine'
+call plug#end()
+
+" Allow CtrlP to find dotfiles
+let g:ctrlp_show_hidden = 1
+
+"Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -22,7 +57,7 @@
 set number
 
 " jk is esc
-inoremap jk <esc>
+inoremap jk <esc>l
 
 " Enable filetype plugins
 filetype plugin on
@@ -42,11 +77,6 @@ let mapleader = ","
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
-" Pathogen install
-execute pathogen#infect()
-
-" Allow CtrlP to find dotfiles
-let g:ctrlp_show_hidden = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -156,6 +186,6 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.rb,*.md :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.rb,*.md,*.haml :call CleanExtraSpaces()
 endif
 

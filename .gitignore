@@ -1,3 +1,8 @@
 # Vim related
 .netrwhist
 *.stolen
+
+# vim-plug related. Installed and updated automatically
+# so no need to have in dotfiles.
+plugged
+plug.vim
