@@ -151,3 +151,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Mount SSHF connection to PI on login.
 # sshfs -o idmap=user olafur@192.168.1.110:/media ~/pi
+
+# Always use ZSH
+if [ -t 1 ]; then
+  exec zsh
+fi

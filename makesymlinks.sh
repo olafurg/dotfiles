@@ -12,7 +12,6 @@ olddir=~/dotfiles_old
 # List of files/dirs to symlink in home dir
 files=".zshrc
        .rubocop.yml
-       .vim
        .vimrc
        .bash
        .bashrc
