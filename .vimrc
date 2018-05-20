@@ -74,7 +74,7 @@ set showcmd
 " like <leader>w saves the current file
 let mapleader = ","
 
-" Fast saving
+" Fast saving with leader+w
 nnoremap <leader>w :w!<cr>
 
 
@@ -106,11 +106,11 @@ try
 catch
 endtry
 
-" Set utf8 as standard encoding and en_US as the standard language
+" Set utf8 as standard encoding
 set encoding=utf8
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
+" Use unix as the standard file type
+set fileformats=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab related
