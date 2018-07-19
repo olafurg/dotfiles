@@ -39,6 +39,8 @@ Plug 'tpope/vim-rails'
 Plug 'danro/rename.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
+Plug 'janko-m/vim-test'
 call plug#end()
 
 " Allow CtrlP to find dotfiles
