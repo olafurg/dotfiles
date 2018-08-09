@@ -22,7 +22,9 @@ On a newly set up machine here's how to set up and use the repo.
   ./makesymlinks.sh
   ```
 
-That's it! Restart your terminal and you're good to go.
+To be sure, restart your terminal, run `./makesymlinks.sh` once more and restart again.
+
+That's it! You should be good to go.
 
 ## Adding new files to monitor
 If you're adding new dotfiles to include in the package make sure to add them to the list in `makesymlinks.sh`. E.g. if you want to include a file called `.settings-file`, located in your home directory:
