@@ -113,3 +113,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Set MYVIMRC variable
 export MYVIMRC=~/.vimrc
+
+# NVM config
+export NVM_DIR="/home/olafurg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
