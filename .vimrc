@@ -101,14 +101,15 @@ syntax enable
 
 " Colorscheme settings
 set background=dark
-"try
-" let g:gruvbox_termcolors=256
-"  colorscheme gruvbox
-"  let g:airline_theme='gruvbox'
-"catch
-"endtry
- let g:solarized_termcolors=256
-colorscheme solarized
+try
+ let g:gruvbox_termcolors=256
+  colorscheme gruvbox
+  let g:airline_theme='gruvbox'
+catch
+endtry
+"let g:solarized_termcolors=256
+"let g:airline_theme='solarized'
+"colorscheme solarized
 
 " Set utf8 as standard encoding
 set encoding=utf8
