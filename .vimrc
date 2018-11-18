@@ -43,6 +43,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'janko-m/vim-test'
 call plug#end()
 
+" ctrlp config
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Allow CtrlP to find dotfiles
 let g:ctrlp_show_hidden = 1
 
