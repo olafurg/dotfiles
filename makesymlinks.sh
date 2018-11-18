@@ -9,7 +9,8 @@
 dir=~/dotfiles
 olddir=~/dotfiles_old
 
-# List of files/dirs to symlink in home dir
+# List of files/dirs to symlink in home dir.
+directories=".config/terminator"
 files=".zshrc
        .rubocop.yml
        .vimrc
@@ -19,6 +20,7 @@ files=".zshrc
        .gemrc
        .rspec
        .tmux.conf
+       .config/terminator/config
        "
 
 ########## Install zsh and oh-my-zsh
@@ -74,8 +76,15 @@ printf "done\n"
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create
 # symlinks from the homedir to any files in the ~/dotfiles directory specified
 # in $files
-echo "Moving any existing dotfiles from ~ to $olddir"
+
+echo "Creating directories if needed"
+for directory in $directories; do
+  echo "Creating directory structure $directory"
+  mkdir --parents $directory
+done
+
 for file in $files; do
+  echo "Moving any existing dotfiles from ~ to $olddir"
   mv ~/$file $olddir
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/$file

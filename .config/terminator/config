@@ -1,0 +1,25 @@
+[global_config]
+  title_font = Monospace 9
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+      size = 900, 600
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Monospace 9
+    foreground_color = "#ebdbb2"
+    login_shell = True
+    use_system_font = False
