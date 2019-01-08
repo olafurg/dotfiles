@@ -36,11 +36,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ajmwagar/vim-deus'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
 Plug 'danro/rename.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'janko-m/vim-test'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 " ctrlp config
@@ -53,6 +55,13 @@ let g:ctrlp_show_hidden = 1
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Ultisnips config
+let g:UltiSnipsUsePythonVersion = 3
+" Triggers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
