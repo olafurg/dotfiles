@@ -57,10 +57,10 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Ultisnips config
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 " Triggers
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,6 +103,8 @@ set scrolloff=7
 set splitright
 set splitbelow
 
+" Set conceal level
+set conceallevel=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
