@@ -11,7 +11,9 @@ olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir.
 directories=".config/terminator
-             .vim/UltiSnips"
+             .vim/UltiSnips
+             .vim/undodir
+            "
 files=".zshrc
        .rubocop.yml
        .vimrc
@@ -22,46 +24,12 @@ files=".zshrc
        .rspec
        .tmux.conf
        .config/terminator/config
-       .vim/UltiSnips/*
+       .vim/UltiSnips
+       .vim/undodir
        "
 
-########## Install zsh and oh-my-zsh
-
-install_zsh () {
-  # Test to see if zsh is installed.
-  if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Install oh-my-zsh acc. to their instructions.
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-      chsh -s $(which zsh)
-    fi
-  else # If zsh isn't installed, get the platform of the current machine
-    platform=$(uname -a);
-    # If the platform is some Linux version, tell the user to install zsh
-    if [[ ${platform,,} = *"linux"* ]]; then
-      # Ubuntu (including Microsoft WSL)?
-      if [[ ${platform,,} = *"ubuntu"* ]] || [[ ${platform,,} = *"microsoft"* ]]; then
-        sudo apt-get install zsh
-        install_zsh
-      # Arch?
-      elif [[ ${platform,,} = *"arch"* ]]; then
-        sudo pacman -S zsh
-        install_zsh
-      # Other (you're on your own)
-      else
-        echo "Please install zsh, then re-run this script"
-        exit
-      fi
-    # If the platform is OS X, tell the user to install zsh :)
-    elif [[ $platform == 'Darwin' ]]; then
-      echo "Please install zsh, then re-run this script!"
-      exit
-    fi
-  fi
-}
-
-install_zsh
+########## Install zsh and oh-my-zsh (another script)
+./install_zsh.sh
 
 ########## Setup of dotfiles
 
@@ -79,12 +47,13 @@ printf "done\n"
 # symlinks from the homedir to any files in the ~/dotfiles directory specified
 # in $files
 
-echo "Creating directories if needed"
+echo "Creating directories as needed"
 for directory in $directories; do
   echo "Creating directory structure $directory"
   mkdir --parents $directory
 done
 
+echo "Creating files as needed"
 for file in $files; do
   echo "Moving any existing dotfiles from ~ to $olddir"
   mv ~/$file $olddir

@@ -170,11 +170,15 @@ set hlsearch
 set incsearch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"    -> Files and backups
+"    -> Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable swap files
 set noswapfile
+
+" Set persistent undo
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
