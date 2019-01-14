@@ -10,7 +10,8 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir.
-directories=".config/terminator"
+directories=".config/terminator
+             .vim/UltiSnips"
 files=".zshrc
        .rubocop.yml
        .vimrc
@@ -21,6 +22,7 @@ files=".zshrc
        .rspec
        .tmux.conf
        .config/terminator/config
+       .vim/UltiSnips/*
        "
 
 ########## Install zsh and oh-my-zsh
