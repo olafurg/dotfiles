@@ -91,6 +91,8 @@ let mapleader = ","
 
 " Fast saving with leader+w
 nnoremap <leader>w :w!<cr>
+" Fast quit with leader+q
+nnoremap <leader>q :q<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
