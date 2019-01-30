@@ -12,6 +12,7 @@ olddir=~/dotfiles_old
 # List of files/dirs to symlink in home dir.
 directories=".config/terminator
              .vim/UltiSnips
+             .vim/undodir
             "
 files=".zshrc
        .rubocop.yml
@@ -24,6 +25,7 @@ files=".zshrc
        .tmux.conf
        .config/terminator/config
        .vim/UltiSnips
+       .vim/undodir
        "
 
 ########## Install zsh and oh-my-zsh (another script)

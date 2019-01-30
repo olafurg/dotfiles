@@ -51,7 +51,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Allow CtrlP to find dotfiles
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'node_modules\|.git$'
+    \ }
 
 "Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -92,6 +94,11 @@ let mapleader = ","
 
 " Fast saving with leader+w
 nnoremap <leader>w :w!<cr>
+" Fast quit with leader+q
+nnoremap <leader>q :q<cr>
+
+" Wrap
+set wrap linebreak
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,7 +152,7 @@ set softtabstop=2
 set shiftwidth=2
 
 " Does nothing as I have softtabstop and shiftwidth with expandtab. No tabs exist.
-set tabstop=8
+set tabstop=2
 
 " Be smart when using tabs
 set smarttab
@@ -171,11 +178,15 @@ set hlsearch
 set incsearch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"    -> Files and backups
+"    -> Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Disable swap files
 set noswapfile
+
+" Set persistent undo
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
