@@ -43,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'janko-m/vim-test'
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 " ctrlp config
@@ -79,8 +80,8 @@ filetype plugin on
 filetype indent on
 
 " Indenting
-" set autoindent
-" set smartindent
+set autoindent
+set smartindent
 
 " Show (partial) command in the last line of the screen
 set showcmd
