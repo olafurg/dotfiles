@@ -43,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'janko-m/vim-test'
 Plug 'SirVer/ultisnips'
+Plug 'w0rp/ale'
 call plug#end()
 
 " ctrlp config
@@ -65,6 +66,12 @@ let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" ALE config
+let b:ale_fixers = {
+\  'javascript': ['prettier', 'eslint'],
+\}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
