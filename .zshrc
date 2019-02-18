@@ -122,4 +122,4 @@ export NVM_DIR="/home/olafurg/.nvm"
 export DOCKER_HOST=tcp://localhost:2375
 
 # Enable the cosmic latte vim theme for the terminal
-[ -n "$PS1" ] && sh ~/.vim/plugged/cosmic_latte/shell/cosmic_latte_light.sh
+[ -n "$PS1" ] && sh ~/.vim/plugged/cosmic_latte/shell/cosmic_latte_dark.sh

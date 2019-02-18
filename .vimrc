@@ -131,7 +131,7 @@ set conceallevel=0
 syntax enable
 
 " Colorscheme settings
-set background=light
+set background=dark
 
 " Gruvbox set
 " try
@@ -146,7 +146,7 @@ set background=light
 
 " Cosmic latte set
 colorscheme cosmic_latte
-let g:airline_theme='cosmic_latte_light'
+let g:airline_theme='cosmic_latte_dark'
 set termguicolors
 
 " Set utf8 as standard encoding
