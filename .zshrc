@@ -117,3 +117,9 @@ export MYVIMRC=~/.vimrc
 # NVM config
 export NVM_DIR="/home/olafurg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Docker config
+export DOCKER_HOST=tcp://localhost:2375
+
+# Enable the cosmic latte vim theme for the terminal
+[ -n "$PS1" ] && sh ~/.vim/plugged/cosmic_latte/shell/cosmic_latte_light.sh
