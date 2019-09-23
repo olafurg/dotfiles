@@ -46,6 +46,7 @@ Plug 'SirVer/ultisnips'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'nightsense/cosmic_latte'
+Plug 'slim-template/vim-slim'
 call plug#end()
 
 " ctrlp config
@@ -130,21 +131,9 @@ set conceallevel=0
 " Enable syntax highlighting
 syntax enable
 
-" Colorscheme settings
+" Color scheme
+set termguicolors
 set background=dark
-
-" Gruvbox set
-" try
-"  let g:gruvbox_termcolors=256
-"   colorscheme gruvbox
-"   let g:airline_theme='gruvbox'
-" catch
-" endtry
-"let g:solarized_termcolors=256
-"let g:airline_theme='solarized'
-"colorscheme solarized
-
-" Cosmic latte set
 colorscheme cosmic_latte
 let g:airline_theme='cosmic_latte_dark'
 set termguicolors
