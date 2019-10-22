@@ -115,7 +115,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export MYVIMRC=~/.vimrc
 
 # NVM config
-export NVM_DIR="/home/olafurg/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Docker config
@@ -123,3 +123,6 @@ export DOCKER_HOST=tcp://localhost:2375
 
 # Enable the cosmic latte vim theme for the terminal
 [ -n "$PS1" ] && sh ~/.vim/plugged/cosmic_latte/shell/cosmic_latte_dark.sh
+
+# Yarn config
+export PATH="$PATH:/opt/yarn-1.19.1/bin"
