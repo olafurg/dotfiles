@@ -133,9 +133,9 @@ syntax enable
 
 " Color scheme
 set termguicolors
-set background=dark
-colorscheme cosmic_latte
-let g:airline_theme='cosmic_latte_dark'
+set background=light
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 set termguicolors
 
 " Set utf8 as standard encoding
