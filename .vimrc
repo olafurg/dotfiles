@@ -132,11 +132,11 @@ set conceallevel=0
 syntax enable
 
 " Color scheme
-set termguicolors
-set background=light
+set term=screen-256color
+" set termguicolors
+set background=dark
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
-set termguicolors
 
 " Set utf8 as standard encoding
 set encoding=utf8
