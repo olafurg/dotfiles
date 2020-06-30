@@ -18,8 +18,8 @@ else # If zsh isn't installed, get the platform of the current machine
     if [[ ${platform,,} = *"ubuntu"* ]] || [[ ${platform,,} = *"microsoft"* ]]; then
       sudo apt-get install zsh
       install_zsh
-      # Arch?
-    elif [[ ${platform,,} = *"arch"* ]]; then
+      # Arch or Manjaro?
+    elif [[ ${platform,,} = *"arch"* ]] || [[ ${platform,,} = *"manjaro"* ]]; then
       sudo pacman -S zsh
       install_zsh
       # Other (you're on your own)

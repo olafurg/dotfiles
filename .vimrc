@@ -109,7 +109,12 @@ nnoremap <leader>q :q<cr>
 " Wrap
 set wrap linebreak
 
+<<<<<<< HEAD
 set spell " spell check
+=======
+" Yank to clipboard
+set clipboard=unnamedplus " Linux
+>>>>>>> 44610795b70eb4beb1033a3a05e6cd093861baa1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

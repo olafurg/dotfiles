@@ -72,11 +72,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -93,6 +93,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# open ~/.zshrc in using the default editor specified in $EDITOR
+alias ec="$EDITOR $HOME/.zshrc"
+
+# source ~/.zshrc
+alias sc="source $HOME/.zshrc"
+
 # RVM support 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
@@ -100,13 +106,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/bin
 
 # Fix directory colors: 
-#Change ls colours
-LS_COLORS="ow=01;36;40" && export LS_COLORS
-
-# Make cd use the ls colours: https://github.com/lloydstubber/my-wsl-setup
-# zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-# autoload -Uz compinit
-# compinit
+# Change ls colours
+#LS_COLORS="ow=01;36;40" && export LS_COLORS
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -120,9 +121,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Docker config
 export DOCKER_HOST=tcp://localhost:2375
-
-# Enable the cosmic latte vim theme for the terminal
-[ -n "$PS1" ] && sh ~/.vim/plugged/cosmic_latte/shell/cosmic_latte_dark.sh
 
 # Yarn config
 export PATH="$PATH:/opt/yarn-1.19.1/bin"
