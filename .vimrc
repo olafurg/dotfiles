@@ -109,6 +109,7 @@ nnoremap <leader>q :q<cr>
 " Wrap
 set wrap linebreak
 
+set spell " spell check
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
