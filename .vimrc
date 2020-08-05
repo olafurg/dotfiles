@@ -109,6 +109,8 @@ nnoremap <leader>q :q<cr>
 " Wrap
 set wrap linebreak
 
+set spell " spell check
+
 " Yank to clipboard
 set clipboard=unnamedplus " Linux
 
