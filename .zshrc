@@ -60,6 +60,7 @@ ZSH_CUSTOM=$HOME/dotfiles/.oh-my-zsh/custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  asdf
 )
 
 source $ZSH/oh-my-zsh.sh
