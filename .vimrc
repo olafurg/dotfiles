@@ -39,7 +39,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'danro/rename.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'janko-m/vim-test'
 Plug 'SirVer/ultisnips'
@@ -57,6 +57,11 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'node_modules\|.git$'
     \ }
+
+" indentLine config
+" let g:indentLine_setColors = 0 " color defined by color scheme (default grey)
+" let g:indentLine_concealCursor = 'inc'
+" let g:indentLine_conceallevel = 2
 
 "Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
