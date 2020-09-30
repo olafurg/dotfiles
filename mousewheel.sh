@@ -18,8 +18,8 @@ then
 
 cat >~/.imwheelrc<<EOF
 ".*"
-None,      Up,   Button4, 1
-None,      Down, Button5, 1
+None,      Up,   Button4, 2
+None,      Down, Button5, 2
 Control_L, Up,   Control_L|Button4
 Control_L, Down, Control_L|Button5
 Shift_L,   Up,   Shift_L|Button4
@@ -41,4 +41,4 @@ sed -i "s/\($TARGET_KEY *Button4, *\).*/\1$NEW_VALUE/" ~/.imwheelrc # find the s
 sed -i "s/\($TARGET_KEY *Button5, *\).*/\1$NEW_VALUE/" ~/.imwheelrc # find the string Button5, and write new value.
 
 cat ~/.imwheelrc
-imwheel -kill
+imwheel -kill -b "45"
