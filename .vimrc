@@ -47,6 +47,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'nightsense/cosmic_latte'
 Plug 'slim-template/vim-slim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " ctrlp config
