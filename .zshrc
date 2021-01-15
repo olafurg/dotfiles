@@ -98,8 +98,6 @@ alias docker-compose='sudo docker-compose'
 
 # open ~/.zshrc in using the default editor specified in $EDITOR
 alias ec="$EDITOR $HOME/.zshrc"
-
-# source ~/.zshrc
 alias sc="source $HOME/.zshrc"
 
 # RVM support 
