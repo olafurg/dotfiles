@@ -17,7 +17,7 @@ if [ ! -f ~/.imwheelrc ]
 then
 
 cat >~/.imwheelrc<<EOF
-"brave"
+"chrome|chromium|slack|brave"
 None,      Up,   Button4, 2
 None,      Down, Button5, 2
 Control_L, Up,   Control_L|Button4
