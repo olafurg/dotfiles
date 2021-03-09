@@ -96,11 +96,10 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias docker='sudo docker'
 alias docker-compose='sudo docker-compose'
+alias xo='xdg-open &>/dev/null'
 
 # open ~/.zshrc in using the default editor specified in $EDITOR
 alias ec="$EDITOR $HOME/.zshrc"
-
-# source ~/.zshrc
 alias sc="source $HOME/.zshrc"
 
 # RVM support 
