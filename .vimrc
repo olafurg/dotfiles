@@ -115,7 +115,7 @@ nnoremap <leader>q :q<cr>
 " Wrap
 set wrap linebreak
 
-set spell " spell check
+set spell spelllang=en_us " spell check
 
 " Yank to clipboard
 set clipboard=unnamedplus " Linux
