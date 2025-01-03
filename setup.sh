@@ -34,8 +34,9 @@ files=(
         ".zshrc"
      )
 
-########## Install zsh and oh-my-zsh (another script)
-./install_zsh.sh
+########## Install tools
+installers/install_oh_my_zsh.sh
+installers/install_ghostty.sh
 
 ########## Setup of dotfiles
 
