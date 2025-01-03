@@ -16,6 +16,7 @@ directories=(
               ".vim/undodir"
             )
 files=(
+        ".asdfrc"
         # ".bash"
         # ".bashrc"
         # ".config/terminator"
