@@ -21,6 +21,7 @@ files=(
         # ".config/terminator"
         ".gemrc"
         ".gitconfig"
+        ".gitignore"
         # ".rubocop.yml"
         ".rspec"
         ".tmux.conf"

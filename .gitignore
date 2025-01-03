@@ -9,3 +9,6 @@ plug.vim
 
 # Need the undodir but not the content
 undodir/*
+
+.DS_Store
+.vscode
