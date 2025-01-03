@@ -1,5 +1,7 @@
 [push]
 	default = simple
+[pull]
+	rebase = true
 [alias]
 	st = status
 	ci = commit
@@ -14,5 +16,6 @@
 	editor = vim
 	autocrlf = input
 	filemode = false
+	excludesfile = /Users/olafurg/.gitignore
 [init]
 	defaultBranch = main
