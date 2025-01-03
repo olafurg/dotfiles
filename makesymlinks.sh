@@ -12,6 +12,7 @@ olddir=~/dotfiles_old
 # List of files/dirs to symlink in home dir.
 directories=(
               # ".config/terminator"
+              ".oh-my-zsh/custom"
               # ".vim/UltiSnips"
               ".vim/undodir"
             )
@@ -23,6 +24,7 @@ files=(
         ".gemrc"
         ".gitconfig"
         ".gitignore"
+        ".oh-my-zsh/custom"
         # ".rubocop.yml"
         ".rspec"
         ".tmux.conf"
