@@ -10,24 +10,24 @@ dir=~/dotfiles
 olddir=~/dotfiles_old
 
 # List of files/dirs to symlink in home dir.
-directories=( ".config/terminator"
-              ".vim/UltiSnips"
+directories=(
+              # ".config/terminator"
+              # ".vim/UltiSnips"
               ".vim/undodir"
             )
 files=(
-#	".zshrc"
-        ".rubocop.yml"
-        ".vimrc"
-        ".bash"
-#        ".bashrc"
-        ".gitconfig"
-        ".zshrc"
+        # ".bash"
+        # ".bashrc"
+        # ".config/terminator"
         ".gemrc"
+        ".gitconfig"
+        # ".rubocop.yml"
         ".rspec"
         ".tmux.conf"
-        ".config/terminator"
-        ".vim/UltiSnips"
+        # ".vim/UltiSnips"
+        ".vimrc"
         ".vim/undodir"
+        ".zshrc"
      )
 
 ########## Install zsh and oh-my-zsh (another script)
@@ -56,7 +56,7 @@ echo "Creating directories as needed"
 for directory in "${directories[@]}"
 do
   printf "* Creating directory structure $directory ..."
-  mkdir --parents $directory
+  mkdir -p $directory
   print_done
 done
 

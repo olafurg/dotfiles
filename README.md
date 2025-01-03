@@ -15,7 +15,7 @@ On a newly set up machine here's how to set up and use the repo.
 
   You should then have this repository under `/home/username/dotfiles`.
 
-2. Now `cd` into `dotfiles` and run the setup script.
+2. Now `cd` into `dotfiles` and run the setup script. Would be wise to review the script and make edits if you want to exclude/include some things for your machine.
 
   ```
   cd dotfiles
